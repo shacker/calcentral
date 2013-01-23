@@ -153,6 +153,25 @@ button {
     padding-left: 3px;
     padding-right: 3px;
   }
+  &.transparent, &.transparent:hover {
+    background-color: #fff;
+  }
+  // Color of text field in split-box
+  &.dropdown.transparent.split > a, &.dropdown.transparent.split > a:hover {
+    background-color: #fff;
+    color: #6f6f6f;
+  }
+  // Color of arrow background in split-box
+  &.dropdown.split > span, &.dropdown.split > span:hover, &.dropdown.split > span:focus {
+    background-color: transparent;
+  }
+  // Color of drop-down arrow in split-box
+  &.dropdown.split.small span::after {
+    border-color: #aaa transparent transparent transparent;
+  }
+  &.cc-borderless-button {
+    border: none;
+  }
 }
 .cc-button-submit {
   background: $cc-action-button-color;
@@ -176,6 +195,7 @@ button {
   text-decoration: underline;
 }
 
+
 /* Container */
 .cc-container-main {
   background-color: $white;
@@ -196,6 +216,7 @@ button {
   }
   .cc-launcher-icons {
     border-right: 1px solid $cc-launcher-border-color;
+    height: 27px;
     padding: 1px 10px 3px 5px;
   }
   .cc-icon {
@@ -207,6 +228,9 @@ button {
   }
   .cc-launcher-icon-dropdown {
     font-size: 8px;
+  }
+  .cc-launcher-appellation {
+    max-width: 200px;
   }
 }
 .cc-launcher, .cc-launcher .cc-launcher-dropdown {
