@@ -30,6 +30,7 @@ module Calcentral
         GoogleCreateTaskListProxy => :expire,
         GoogleDeleteTaskListProxy => :expire,
         GoogleEventsListProxy => :expire,
+        GoogleDeleteTaskProxy => :expire,
         GoogleInsertTaskProxy => :expire,
         GoogleTasksListProxy => :expire,
         GoogleUpdateTaskProxy => :expire,

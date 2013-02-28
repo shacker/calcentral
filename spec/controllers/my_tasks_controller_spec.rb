@@ -34,6 +34,17 @@ describe MyTasksController do
     json_response.should == hash
   end
 
+  it "should successfully delete a google task" do
+    session[:user_id] = @user_id
+    hash = {"task_id" => "sdlfkjsldfj3r3", "emitter" => "Google"}
+    # MyTasks::Merged.any_instance.stub(:update_task).and_return(hash)
+    post :delete_task, hash
+    json_response = JSON.parse(response.body)
+    puts(json_response)
+    # json_response.should_not == {}
+    # json_response.should == hash
+  end
+
   it "should return a 400 error on some ArgumentError with the task model object" do
     session[:user_id] = @user_id
     error_msg = "some fatal issue"

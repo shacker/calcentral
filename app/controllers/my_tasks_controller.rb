@@ -24,6 +24,19 @@ class MyTasksController < ApplicationController
     end
   end
 
+  def delete_task
+    puts("in my_tasks controller - delete task")
+    puts(params)
+    begin
+      my_tasks_model = MyTasks::Merged.new(session[:user_id], :original_user_id => session[:original_user_id])
+      puts("my_tasks_model is", my_tasks_model.methods)
+      puts("done getting my_tasks_model")
+      render :json => my_tasks_model.delete_task(request.request_parameters).to_json
+    rescue ArgumentError => e
+      return render :json => {error: "Invalid Arguments", message: e.message}.to_json, :status => 400
+    end
+  end
+
   private
   def check_authentication
     render :json => {}.to_json unless session[:user_id]
