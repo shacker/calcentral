@@ -84,6 +84,11 @@ describe GoogleProxy do
     needsAction_response.data["status"].should == "needsAction"
     needsAction_response.data["completed"].blank?.should == true
 
+    #Delete task
+    delete_proxy = GoogleDeleteTaskProxy.new proxy_opts
+    response = delete_proxy.delete_task(test_task_list_id, new_task_id)
+    response.should be_true
+
     delete_proxy = GoogleDeleteTaskListProxy.new proxy_opts
     suppress_rails_logging {
       delete_response = delete_proxy.delete_task_list(test_task_list_id)
@@ -106,11 +111,13 @@ describe GoogleProxy do
   it "should simulate revoking a token after a 401 response", :testext => true do
     Oauth2Data.new_or_update(@random_id, GoogleProxy::APP_ID,
                              "bogus_token", "bogus_refresh_token", 0)
-    proxy = GoogleEventsListProxy.new(:user_id => @random_id)
-    GoogleProxy.access_granted?(@random_id).should be_true
-    proxy.authorization.stub(:expired?).and_return(false)
-    response_array = proxy.events_list()
-    GoogleProxy.access_granted?(@random_id).should be_false
+    suppress_rails_logging do
+      proxy = GoogleEventsListProxy.new(:user_id => @random_id)
+      GoogleProxy.access_granted?(@random_id).should be_true
+      proxy.authorization.stub(:expired?).and_return(false)
+      response_array = proxy.events_list()
+      GoogleProxy.access_granted?(@random_id).should be_false
+    end
   end
 
   it "should simulate a dynamically set token params request", :testext => true do
