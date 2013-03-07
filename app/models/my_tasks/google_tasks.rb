@@ -73,7 +73,7 @@ class MyTasks::GoogleTasks
     if entry["due_date"] && !entry["due_date"].blank?
       formatted_entry["due"] = Date.strptime(entry["due_date"]).to_time_in_current_zone.to_datetime
     end
-    formatted_entry["notes"] = entry["note"] if entry["note"]
+    formatted_entry["notes"] = entry["notes"] if entry["notes"]
     Rails.logger.debug "Formatted body entry for google proxy update_task: #{formatted_entry.inspect}"
     formatted_entry
   end
@@ -90,8 +90,8 @@ class MyTasks::GoogleTasks
     formatted_entry = {"id" => entry["id"]}
     formatted_entry["status"] = "needsAction" if entry["status"] == "needs_action"
     formatted_entry["status"] ||= "completed"
-    formatted_entry["title"] = entry["title"]
-    formatted_entry["notes"] = entry["note"]
+    formatted_entry["title"] = entry["title"] unless entry["title"].blank?
+    formatted_entry["notes"] = entry["notes"] unless entry["notes"].blank?
     if entry["due_date"] && entry["due_date"]["datetime"]
       formatted_entry["due"] = Date.strptime(entry["due_date"]["datetime"]).to_time_in_current_zone.to_datetime
     end
@@ -112,9 +112,7 @@ class MyTasks::GoogleTasks
     }
 
     # Some fields may or may not be present in Google feed
-    if entry["notes"]
-      formatted_entry["note"] = entry["notes"]
-    end
+    formatted_entry["notes"] = entry["notes"] if entry["notes"]
 
     if entry["completed"]
       format_date_into_entry!(convert_due_date(entry["completed"]), formatted_entry, "completed_date")
