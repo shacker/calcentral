@@ -12,6 +12,13 @@
         <div id="addTaskLabel" class="cc-visuallyhidden">Add a task</div>
       </button>
     </div>
+
+<input ng-model="date" ui-date>
+Selected Date: {{ date }}
+Formatted Date: {{ date | date: 'mediumDate'}}
+Selected Month: {{ date.getMonth() }}
+<div ng-model="date" ui-date></div>
+
     <div class="cc-tasks-list">
       <div class="cc-widget-body">
         <div data-ng-include src="'templates/dashboard_task_editor.html'"></div>
