@@ -88,6 +88,8 @@ group :development, :test , :testext do
   gem "jasmine", "~> 1.3.1"
   gem "jquery-rails", "~> 2.2.1"
   gem "jasmine-jquery-rails", "~> 1.4.2"
+  gem "jquery-ui-rails", "~> 4.0.1"
+  gem "angular-ui-rails", "~> 0.4.0.1"
 
   # We need to specify the latest webdriver here, to support the latest firefox
   gem "selenium-webdriver", "~> 2.31.0"

@@ -6,7 +6,7 @@
    * Initialize all of the submodules
    */
   angular.module('calcentral.directives', []);
-  angular.module('calcentral.services', ['ng']);
+  angular.module('calcentral.services', ['ng', 'ui']);
 
   /**
    * CalCentral module

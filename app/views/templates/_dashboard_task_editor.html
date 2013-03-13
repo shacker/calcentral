@@ -23,7 +23,8 @@
           name="add_task_due_date"
           id="cc-widget-tasks-addtask-date"
           placeholder="mm/dd/yy"
-          data-cc-mmddyyvalidator />
+          ui-date="dateOptions"
+          />
         <p class="cc-alert cc-alert-text" data-ng-show="cc_widget_tasks_form.add_task_due_date.$error.ccMmddyyvalidator">
           Please use mm/dd/yy date format
         </p>

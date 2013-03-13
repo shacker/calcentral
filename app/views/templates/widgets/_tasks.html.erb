@@ -1,4 +1,5 @@
 <div class="cc-widget-tasks" data-ng-controller="TasksController">
+
   <div data-ng-controller="TaskAdderController">
     <div class="cc-widget-title">
       <h2 class="cc-left">Assignments and Tasks</h2>
@@ -13,11 +14,6 @@
       </button>
     </div>
 
-<input ng-model="date" ui-date>
-Selected Date: {{ date }}
-Formatted Date: {{ date | date: 'mediumDate'}}
-Selected Month: {{ date.getMonth() }}
-<div ng-model="date" ui-date></div>
 
     <div class="cc-tasks-list">
       <div class="cc-widget-body">

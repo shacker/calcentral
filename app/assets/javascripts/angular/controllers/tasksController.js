@@ -1,4 +1,4 @@
-(function(calcentral, angular) {
+(function(calcentral, angular, $) {
   'use strict';
 
   /**
@@ -8,6 +8,7 @@
 
     // Initial mode for Tasks view
     $scope.tasks_mode = 'scheduled';
+
 
     $scope.getTasks = function() {
       return $http.get('/api/my/tasks').success(function(data) {
@@ -124,6 +125,14 @@
     $scope.filterUnScheduled = function(task) {
       return (!task.due_date && task.status !== 'completed');
     };
+
+    // Date picker settings
+    $scope.dateOptions = {
+      changeYear: true,
+      changeMonth: true,
+      yearRange: '2013:2020'
+    };
+
   }]);
 
-})(window.calcentral, window.angular);
+})(window.calcentral, window.angular, window.jQuery);
