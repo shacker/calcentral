@@ -126,13 +126,6 @@
       return (!task.due_date && task.status !== 'completed');
     };
 
-    // Date picker settings
-    $scope.dateOptions = {
-      changeYear: true,
-      changeMonth: true,
-      yearRange: '2013:2020'
-    };
-
   }]);
 
 })(window.calcentral, window.angular, window.jQuery);

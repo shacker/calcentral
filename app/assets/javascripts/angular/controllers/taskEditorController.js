@@ -12,6 +12,7 @@
     $scope.enableEditor = function() {
       $scope.editorEnabled = true;
       $scope.task.show = false; // Otherwise the form is on blue "show" background.
+
       // Shift the scope to match scope of the add_task form
       $scope.add_edit_task = {
         'title': $scope.task.title,
@@ -19,13 +20,17 @@
         'notes': $scope.task.notes
       };
 
+      // Date picker settings
+      // $scope.task.dateOptions = {
+      //   changeYear: false,
+      //   changeMonth: true,
+      //   yearRange: '2013:2020'
+      // };
+
       // We don't store the exact date format they entered originally, so reconstruct from epoch
       if ($scope.task.due_date) {
-        var d = new Date($scope.task.due_date.epoch * 1000);
-        var mm = ('0' + (d.getMonth() + 1)).slice(-2);
-        var dd = ('0' + d.getDate()).slice(-2);
-        var yy = String(d.getFullYear()).slice(-2);
-        $scope.add_edit_task.due_date = mm + '/' + dd + '/' + yy;
+        console.log($scope.task.due_date.epoch);
+        $scope.add_edit_task.due_date = new Date($scope.task.due_date.epoch * 1000);
       }
     };
 
@@ -51,11 +56,17 @@
       changedTask.title = $scope.add_edit_task.title;
       changedTask.notes = $scope.add_edit_task.notes;
 
+      // // Not all tasks have dates.
+      // if ($scope.add_edit_task.due_date) {
+      //   changedTask.due_date = {};
+      //   var newdatearr = $scope.add_edit_task.due_date.split(/[\/\.\- ]/);
+      //   changedTask.due_date.datetime = 20 + newdatearr[2] + '-' + newdatearr[0] + '-' + newdatearr[1];
+      // }
       // Not all tasks have dates.
       if ($scope.add_edit_task.due_date) {
-        changedTask.due_date = {};
-        var newdatearr = $scope.add_edit_task.due_date.split(/[\/\.\- ]/);
-        changedTask.due_date.datetime = 20 + newdatearr[2] + '-' + newdatearr[0] + '-' + newdatearr[1];
+        var submitDate = $scope.add_edit_task.due_date;
+        console.log(submitDate);
+        newtask.due_date = submitDate.getFullYear() + '-' + (submitDate.getMonth() + 1) + '-' + submitDate.getDate();
       }
 
       // If no date or date has been removed, also delete due_date sub-object

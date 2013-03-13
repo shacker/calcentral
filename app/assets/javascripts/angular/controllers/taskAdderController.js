@@ -24,6 +24,13 @@
       // This message will disappear as soon the task has been added.
       $scope.task_adder_is_processing = true;
 
+      // Date picker settings
+      $scope.dateOptions = {
+        changeYear: true,
+        changeMonth: true,
+        yearRange: '2013:2020'
+      };
+
       var newtask = {
         'emitter': 'Google',
         'notes': $scope.add_edit_task.notes,
@@ -32,9 +39,8 @@
 
       // Not all tasks have dates.
       if ($scope.add_edit_task.due_date) {
-        console.log($scope.add_edit_task.due_date.getMonth());
-        // var newdatearr = $scope.add_edit_task.due_date.split(/[\/\.\- ]/);
-        // newtask.due_date = 20 + newdatearr[2] + '-' + newdatearr[0] + '-' + newdatearr[1];
+        var submitDate = $scope.add_edit_task.due_date;
+        newtask.due_date = submitDate.getFullYear() + '-' + (submitDate.getMonth() + 1) + '-' + submitDate.getDate();
       }
 
       // Angular already blocks form submission if title is empty, but also check here for testing

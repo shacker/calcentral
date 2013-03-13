@@ -65,6 +65,10 @@ group :assets do
   gem "compass-rails", "~> 1.0.3"
   gem "zurb-foundation", "~> 4.0.5"
 
+  gem "jquery-rails", "~> 2.2.1"
+  gem "jquery-ui-rails", "~> 4.0.1"
+  gem "angular-ui-rails", "~> 0.4.0.1"
+
   # Ruby wrapper for UglifyJS JavaScript compressor
   # https://github.com/lautis/uglifier
   gem "uglifier", "~> 1.3.0"
@@ -86,10 +90,7 @@ group :development, :test , :testext do
   # Test our JavaScript code.
   # https://github.com/pivotal/jasmine-gem
   gem "jasmine", "~> 1.3.1"
-  gem "jquery-rails", "~> 2.2.1"
   gem "jasmine-jquery-rails", "~> 1.4.2"
-  gem "jquery-ui-rails", "~> 4.0.1"
-  gem "angular-ui-rails", "~> 0.4.0.1"
 
   # We need to specify the latest webdriver here, to support the latest firefox
   gem "selenium-webdriver", "~> 2.31.0"
