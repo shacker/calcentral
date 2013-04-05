@@ -56,6 +56,12 @@ class CanvasUserActivityProcessor
       formatted_entry[:date] = format_date date
 
       feed << formatted_entry
+
+      # Some assignments have been graded
+      formatted_entry[:score] = entry["score"] if entry["score"]
+      formatted_entry[:possible_points] = entry["assignment"]["points_possible"] if entry["assignment"]
+      formatted_entry[:comment] = entry["submission_comments"]["comment"] if entry["submission_comments"]
+
     end
     feed
   end
