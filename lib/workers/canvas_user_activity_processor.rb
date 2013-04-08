@@ -103,7 +103,12 @@ class CanvasUserActivityProcessor
   def process_message(entry)
     message_partial = Nokogiri::HTML(entry["message"])
     message_partial = message_partial.xpath("//text()").to_s.gsub(/\s+/, " ")
-    message_partial = message_partial.gsub(/Click here to view the assignment.*/,"").strip
+
+    # Remove some hard-coded strings
+    message_partial = message_partial.gsub(/Click here to view the assignment: http.*$/,"")
+    message_partial = message_partial.gsub(/You can view the submission here: http.*$/,"")
+    message_partial = message_partial.strip
+
     if entry["type"] == "Message"
       title_and_summary = split_title_and_summary entry["title"]
       message = title_and_summary[2] if title_and_summary.size > 2

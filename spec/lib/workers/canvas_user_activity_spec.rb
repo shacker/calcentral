@@ -55,6 +55,18 @@ describe "CanvasUserActivityHandler" do
     activities.size.should == 18
   end
 
+  it "should strip certain strings from the 'message' fields" do
+    options = {:fake => true, :user_id => @random_id}
+    handler = CanvasUserActivityHandler.new(options)
+    activities = handler.get_feed_results
+    activities.each do | activity |
+      if activity[:summary]
+        activity[:summary].should_not include("You can view the submission here")
+        activity[:summary].should_not include("Click here to view the assignment")
+      end
+    end
+  end
+
   describe "CanvasUserActivityFailures", :suppress_celluloid_logger => true do
 
     before :all do
