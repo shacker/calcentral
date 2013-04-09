@@ -52,6 +52,26 @@
                     </div>
                     <p class="cc-widget-activities-sub-activity-summary cc-break-word" data-ng-bind-html="sub_activity.summary" data-cc-truncate-directive="filter:'linky', length:180">
                     </p>
+                    <span data-ng-show="sub_activity.score">
+                      Score: {{sub_activity.score}}/{{sub_activity.possible_points}}
+                    </span>
+
+### MOVE THIS TO BACK-END
+                    <div data-ng-switch on="sub_activity.comments.length">
+
+                      <div data-ng-switch-when="1">
+                        equal 1
+                        <div ng-repeat="comment in sub_activity.comments" >
+                          {{comment}}
+                        </div>
+                      </div>
+
+                      <p data-ng-switch-when=">1">
+                        more than 1
+                        {{sub_activity.comments.length}} comments
+                      </p>
+                    </div>
+
                     <p class="cc-widget-more-view-in">
                       <a data-ng-click="api.analytics.trackExternalLink('Activities', sub_activity.source, sub_activity.source_url)" data-ng-href="{{sub_activity.source_url}}">View in {{sub_activity.emitter}}</a>
                     </p>

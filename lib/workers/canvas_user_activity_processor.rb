@@ -59,8 +59,16 @@ class CanvasUserActivityProcessor
 
       # Some assignments have been graded
       formatted_entry[:score] = entry["score"] if entry["score"]
-      formatted_entry[:possible_points] = entry["assignment"]["points_possible"] if entry["assignment"]
-      formatted_entry[:comment] = entry["submission_comments"]["comment"] if entry["submission_comments"]
+      formatted_entry[:possible_points] = entry["assignment"]["points_possible"] if entry["assignment"] && entry["assignment"]["points_possible"]
+
+      # Assignments may have one or more comments
+      ### TAKE THIS OFF THE API AND APPEND TO SUMMARY INSTEAD
+      if entry["submission_comments"]
+        formatted_entry[:comments] = []
+        entry["submission_comments"].each do |comment|
+          formatted_entry[:comments].push comment["body"]
+        end
+      end
 
     end
     feed
