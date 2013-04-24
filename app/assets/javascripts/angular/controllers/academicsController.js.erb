@@ -31,6 +31,8 @@
           }
         });
 
+        $scope.selected_courses = $scope.selected_semester.schedule;
+        $scope.gpaInit($scope.selected_courses); // Initialize
       });
     };
     $scope.getAcademics();
@@ -39,6 +41,59 @@
       $scope.show_block_history = !$scope.show_block_history;
       apiService.analytics.trackEvent(['Block history', 'Show history panel - ' + $scope.show_block_history ? 'Show' : 'Hide']);
     };
+
+    $scope.gradeopts = [
+      {grade: "A+", weight: 4},
+      {grade: "A", weight: 4},
+      {grade: "A-", weight: 3.7},
+      {grade: "B+", weight: 3.3},
+      {grade: "B", weight: 3},
+      {grade: "B-", weight: 2.7},
+      {grade: "C+", weight: 2.3},
+      {grade: "C", weight: 2},
+      {grade: "C-", weight: 1.7},
+      {grade: "D+", weight: 1.3},
+      {grade: "D", weight: 1},
+      {grade: "D-", weight: 0.7},
+      {grade: "F", weight: 0}
+    ];
+
+
+    $scope.gpaUpdateCourse = function(course, estimated_grade) {
+      course.estimated_grade = estimated_grade; // Update course object on scope
+      $scope.gpaCalculate(); // Recalculate overall GPA
+    };
+
+
+    $scope.gpaCalculate = function() {
+      var total_units = 0;
+      var total_score = 0;
+
+      // Recalculate GPA on every dropdown change.
+      // GPA est. is not accurate until all grades are selected - do not display until then
+      angular.forEach($scope.selected_courses, function(course) {
+        console.log("est grade ", course.estimated_grade);
+        course.score = parseFloat(course.estimated_grade, 10) * course.units;
+        total_units += parseFloat(course.units, 10);
+        total_score += course.score;
+      });
+
+      $scope.estimated_gpa = total_score / total_units;
+      console.log("total_units", total_units);
+      console.log("total score", total_score);
+      console.log("est", $scope.estimated_gpa);
+    };
+
+
+    $scope.gpaInit = function() {
+      console.log("blue", $scope.selected_courses);
+      // Start calculation on initial page load with default values
+      angular.forEach($scope.selected_courses, function(course) {
+        course.estimated_grade = 4;
+      });
+      $scope.gpaCalculate();
+    };
+    // $scope.gpaInit();
 
   }]);
 
