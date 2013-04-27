@@ -1,0 +1,19 @@
+<% if Rails.env == 'development' %>
+(function(calcentral) {
+  'use strict';
+
+  /**
+   * Styles controller
+   */
+  calcentral.controller('StylesController', ['apiService', '$http', '$routeParams', '$scope', function(apiService, $http, $routeParams, $scope) {
+
+    $scope.getHexValue = function(event) {
+      // console.log($event.target.style.backgroundColor);
+      // console.log(angular.element($event).css());
+      console.log(event);
+    }
+
+  }]);
+
+})(window.calcentral);
+<% end %>
