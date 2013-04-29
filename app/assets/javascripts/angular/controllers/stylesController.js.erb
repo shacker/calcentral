@@ -7,10 +7,10 @@
    */
   calcentral.controller('StylesController', ['apiService', '$http', '$routeParams', '$scope', function(apiService, $http, $routeParams, $scope) {
 
-    $scope.getHexValue = function(event) {
+    $scope.getHexValue = function(element) {
       // console.log($event.target.style.backgroundColor);
       // console.log(angular.element($event).css());
-      console.log(event);
+      console.log(element);
     }
 
   }]);
