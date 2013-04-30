@@ -29,27 +29,12 @@
 
       <div class="row">
         <div class="large-12 columns">
-          <div class="panel cc-action-button-color" data-cc-get-hex-value>cc-action-button-color</div>
-          <div class="panel cc-alert-color">cc-alert-color</div>
-          <div class="panel cc-border-color">cc-border-color</div>
-          <div class="panel cc-button-color">cc-button-color</div>
-          <div class="panel cc-column-border-color">cc-column-border-color</div>
-          <div class="panel cc-dark-grey cc-light-text">cc-dark-grey</div>
-          <div class="panel cc-launcher-border-color cc-light-text">cc-launcher-border-color</div>
-          <div class="panel cc-light-grey">cc-light-grey</div>
-          <div class="panel cc-light-medium-grey cc-light-text">cc-light-medium-grey</div>
-          <div class="panel cc-list-border-color">cc-list-border-color</div>
-          <div class="panel cc-main-background-color">cc-main-background-color</div>
-          <div class="panel cc-main-header-border-color">cc-main-header-border-color</div>
-          <div class="panel cc-medium-grey cc-light-text">cc-medium-grey</div>
-          <div class="panel cc-nav-color cc-light-text">cc-nav-color</div>
-          <div class="panel cc-placeholder-color">cc-placeholder-color</div>
-          <div class="panel cc-shadow-color">cc-shadow-color</div>
-          <div class="panel cc-super-light-grey">cc-super-light-grey</div>
-          <div class="panel cc-widget-highlight-background-color">cc-widget-highlight-background-color</div>
-          <div class="panel cc-widget-hover-background-color">cc-widget-hover-background-color</div>
-          <div class="panel cc-widget-more-background-color">cc-widget-more-background-color</div>
-          <div class="panel cc-widget-section-label-color cc-light-text">cc-widget-section-label-color</div>
+            <div
+              data-ng-repeat="color in colors"
+              class="panel cc-styles-color"
+              data-ng-class="color"
+              data-cc-get-hex-value="{{color}}">
+            </div>
         </div>
       </div>
 
