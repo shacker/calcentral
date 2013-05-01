@@ -7,6 +7,8 @@
    */
   calcentral.controller('StylesController', ['apiService', '$http', '$routeParams', '$scope', function(apiService, $http, $routeParams, $scope) {
 
+    $scope.textProperties = '';
+
     $scope.colors = [
       'cc-action-button-color',
       'cc-alert-color',
@@ -29,7 +31,12 @@
       'cc-widget-hover-background-color',
       'cc-widget-more-background-color',
       'cc-widget-section-label-color'
-    ]
+    ];
+
+    $scope.getTextProp = function(e) {
+      $scope.textProperties.fontName = window.getComputedStyle(e.srcElement, null).getPropertyValue("font-family");
+      $scope.textProperties.fontSize = window.getComputedStyle(e.srcElement, null).getPropertyValue("font-size");
+    };
 
   }]);
 
