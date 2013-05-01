@@ -7,13 +7,10 @@
       restrict: 'A',
       scope: true,
       link: function(scope, element) {
-        console.log(element);
-        scope.fontName = window.getComputedStyle(element[0], null).getPropertyValue("font-family");
-        scope.fontSize = window.getComputedStyle(element[0], null).getPropertyValue("font-size");
-
-      },
-      template: '<p class="panel">{{fontName}} {{fontSize}}</p>'
-
+        var fontName = window.getComputedStyle(element[0], null).getPropertyValue("font-family");
+        var fontSize = window.getComputedStyle(element[0], null).getPropertyValue("font-size");
+        element.after("<div class=\"panel\">" + fontSize + fontName + "</div>");
+      }
     };
   });
 

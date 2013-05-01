@@ -7,7 +7,7 @@
    */
   calcentral.controller('StylesController', ['apiService', '$http', '$routeParams', '$scope', function(apiService, $http, $routeParams, $scope) {
 
-    $scope.textProperties = '';
+    $scope.textProperties = {};
 
     $scope.colors = [
       'cc-action-button-color',
@@ -33,10 +33,18 @@
       'cc-widget-section-label-color'
     ];
 
-    $scope.getTextProp = function(e) {
-      $scope.textProperties.fontName = window.getComputedStyle(e.srcElement, null).getPropertyValue("font-family");
-      $scope.textProperties.fontSize = window.getComputedStyle(e.srcElement, null).getPropertyValue("font-size");
-    };
+    // $scope.getTextProp = function(e, section) {
+    //   // var section_name = JSON.stringify(section);
+    //   console.log(section);
+    //   console.log($scope.textProperties);
+
+    //   $scope.textProperties[section] = {};
+
+    //   $scope.textProperties[section].fontName = window.getComputedStyle(e.srcElement, null).getPropertyValue("font-family");
+    //   $scope.textProperties[section].fontSize = window.getComputedStyle(e.srcElement, null).getPropertyValue("font-size");
+    //   console.log($scope.textProperties);
+
+    // };
 
   }]);
 
