@@ -66,8 +66,9 @@
         var fontName = window.getComputedStyle(element[0], null).getPropertyValue("font-family");
         var fontSize = window.getComputedStyle(element[0], null).getPropertyValue("font-size");
         var color = window.getComputedStyle(element[0], null).getPropertyValue("color");
+        var hexcolor = rgbToHex(rgbToArr(color));
 
-        element.after("<div class=\"panel cc-styles-infopanel\">Font family: " + fontName + "<br />Font size: " + fontSize + "<br />Color: " + color + "</div>");
+        element.after("<div class=\"panel cc-styles-infopanel\">Font family: " + fontName + "<br />Font size: " + fontSize + "<br />Color: " + hexcolor + "</div>");
       }
     };
   });
