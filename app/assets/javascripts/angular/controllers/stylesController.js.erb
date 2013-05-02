@@ -9,6 +9,7 @@
 
     $scope.textProperties = {};
 
+    // Until someone can think of a better way, we must copy all SASS color vars here manually
     $scope.colors = [
       'cc-action-button-color',
       'cc-alert-color',
@@ -33,18 +34,6 @@
       'cc-widget-section-label-color'
     ];
 
-    // $scope.getTextProp = function(e, section) {
-    //   // var section_name = JSON.stringify(section);
-    //   console.log(section);
-    //   console.log($scope.textProperties);
-
-    //   $scope.textProperties[section] = {};
-
-    //   $scope.textProperties[section].fontName = window.getComputedStyle(e.srcElement, null).getPropertyValue("font-family");
-    //   $scope.textProperties[section].fontSize = window.getComputedStyle(e.srcElement, null).getPropertyValue("font-size");
-    //   console.log($scope.textProperties);
-
-    // };
 
   }]);
 

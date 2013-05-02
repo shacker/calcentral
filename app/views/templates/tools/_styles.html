@@ -25,13 +25,13 @@
 
       <a name="colors"></a>
       <h2 class="cc-styles-section">Colors</h2>
-      <p>All colors defined as variables in calcentral.scss:</p>
+      <p>Colors defined as variables in calcentral.scss. This grid does not necessarily represent all colors in use on the site (feel free to suggest that some colors be added to this list).</p>
 
       <div class="row">
         <div class="large-12 columns">
             <div
               data-ng-repeat="color in colors"
-              class="panel cc-styles-color"
+              class="panel cc-styles-color-panel"
               data-ng-class="color"
               data-cc-get-hex-value="{{color}}">
             </div>
@@ -47,28 +47,27 @@
       <div class="row">
         <h3 class="cc-styles-sub-section">Paragraphs</h3>
         <div class="large-12 columns">
-          <p data-cc-get-text-properties="paraStyle">
+          <p data-cc-get-text-properties>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-
-
         </div>
       </div>
 
       <div class="row">
         <h3 class="cc-styles-sub-section">Blockquotes</h3>
         <div class="large-12 columns">
-          <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote>
+            <blockquote data-cc-get-text-properties>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </blockquote>
         </div>
       </div>
 
