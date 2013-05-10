@@ -12,6 +12,7 @@
     $scope.getTasks = function() {
       return $http.get('/api/my/tasks').success(function(data) {
         angular.extend($scope, data);
+        throw "Error2";
       });
     };
     $scope.getTasks();

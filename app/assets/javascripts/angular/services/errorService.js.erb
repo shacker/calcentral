@@ -10,9 +10,18 @@
      * Send an error exception
      * @param {String} exception The exception you want to send
      */
+
     var send = function(exception) {
-      exception = exception.message || exception;
-      Raven.captureException(exception);
+      var exception = exception.message || exception;
+      var app_version = <%= ServerRuntime.get_settings["versions"]["application"] %>;
+      var client_host_name = <%= ServerRuntime.get_settings["hostname"].to_s %>;
+
+      Raven.captureMessage(exception, {tags: {
+        app_version: app_version,
+        host: "bar",
+        uid: "foo",
+        ip: "123"
+      }});
     };
 
     // Expose methods
