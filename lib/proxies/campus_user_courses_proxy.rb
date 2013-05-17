@@ -34,7 +34,7 @@ class CampusUserCoursesProxy < BaseProxy
   #    "role": "Student", (or "Instructor")
   #    "waitlist_pos": 2
   # },
-  def get_campus_courses()
+  def get_campus_courses
     self.class.fetch_from_cache @uid do
       campus_classes = []
       previous_id = nil
@@ -75,8 +75,8 @@ class CampusUserCoursesProxy < BaseProxy
       {
           id: course_id,
           course_code: "#{row['dept_name']} #{row['catalog_id']}",
-          ccn: row['ccn'],
-          site_url: course_to_url(row['term_cd'], row['dept_name'], row['catalog_id']),
+          ccn: row['course_cntl_num'],
+          site_url: course_to_url(row['term_cd'], row['term_yr'], row['dept_name'], row['course_cntl_num']),
           emitter: 'Campus',
           name: row['course_title'],
           color_class: "campus-class",
@@ -92,16 +92,16 @@ class CampusUserCoursesProxy < BaseProxy
 
   # Link campus courses to internal class pages for the current semester.
   # TODO: Update to use full class IDs, not just CCNs
-  def course_to_url(term_cd, department, catalog_id)
+  def course_to_url(term_cd, term_year, department, ccn)
     term = case term_cd
-             when 'B' then 'SP'
-             when 'C' then 'SU'
-             when 'D' then "FL"
+             when 'B' then 'spring'
+             when 'C' then 'summer'
+             when 'D' then "fall"
              else
-               Rails.logger.warn("Unknown term code #{term_cd} for #{department} #{catalog_id}")
+               Rails.logger.warn("Unknown term code #{term_cd} for #{department} #{ccn}")
                return ''
            end
-    "/academics/semester/spring-2013/class/73980"
+    "/academics/semester/#{term}-#{term_year}/class/#{ccn}"
   end
 
 end
