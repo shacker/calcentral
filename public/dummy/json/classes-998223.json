@@ -1,0 +1,193 @@
+{
+    "classes": [
+        {
+            "id": "0a970bd0-4917-4488-b2cd-6d4073139ec9",
+            "site_url": "https://sakai-dev.berkeley.edu/portal/site/0a970bd0-4917-4488-b2cd-6d4073139ec9",
+            "emitter": "bSpace",
+            "short_description": "Biology 1B Course Site Spring 2013",
+            "groups": [
+                "ebf28692-a63d-497e-8fa0-3c67ebb867f6",
+                "b159f7f1-15ba-44bc-a5f5-27c2ef093b53",
+                "746640c0-3ec1-4058-bf50-cf1b2ea90240",
+                "4f5cc1c6-fd18-4acc-be81-76af4bc981b4"
+            ],
+            "course_code": "Bio1BLec_S13",
+            "name": "Biology 1B Course Site Spring 2013",
+            "color_class": "bspace-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "BIOLOGY",
+                    "catid": "1B"
+                }
+            ]
+        },
+        {
+            "id": "1e9d6f0f-f53d-495d-ac8d-73c273ce6c2b",
+            "site_url": "https://sakai-dev.berkeley.edu/portal/site/1e9d6f0f-f53d-495d-ac8d-73c273ce6c2b",
+            "emitter": "bSpace",
+            "short_description": "Ma16B, Lecture 1, Spring 2013",
+            "groups": [
+                "f9484660-aa35-449f-b3d2-b5c107eb00c3",
+                "c2d33ec5-af87-4899-9beb-6b7711817654"
+            ],
+            "course_code": "MATH 16B LEC 001 Sp13",
+            "name": "Ma16B, Lecture 1, Spring 2013",
+            "color_class": "bspace-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "MATH",
+                    "catid": "16B"
+                }
+            ]
+        },
+        {
+            "id": "57504dc2-9c44-43e2-8fa5-9acd1ba8c3fa",
+            "site_url": "https://sakai-dev.berkeley.edu/portal/site/57504dc2-9c44-43e2-8fa5-9acd1ba8c3fa",
+            "emitter": "bSpace",
+            "groups": [
+                "ae78579b-6bb4-4b52-82e8-f0142b062740"
+            ],
+            "course_code": "HISTART 11 LEC 001 Sp13",
+            "name": null,
+            "color_class": "bspace-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "HISTART",
+                    "catid": "11"
+                }
+            ]
+        },
+        {
+            "id": "9ad286ab-51f5-4114-8205-ca688b11af32",
+            "site_url": "https://sakai-dev.berkeley.edu/portal/site/9ad286ab-51f5-4114-8205-ca688b11af32",
+            "emitter": "bSpace",
+            "short_description": "PH116 Social, Political, and Ethical Issues in Health and Medicine",
+            "groups": [
+                "f570415b-16c9-4be5-9bff-e1f015d1b95b",
+                "4ebc7189-dfe6-4a1c-a90c-0fe885b4fcb0"
+            ],
+            "course_code": "PB HLTH 116 LEC 001 Sp13",
+            "name": "PH116 Social, Political, and Ethical Issues in Health and Medicine",
+            "color_class": "bspace-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "PB HLTH",
+                    "catid": "116"
+                }
+            ]
+        },
+        {
+            "id": "b6a462d3-6d69-4d60-abb1-3feeca50eba8",
+            "site_url": "https://sakai-dev.berkeley.edu/portal/site/b6a462d3-6d69-4d60-abb1-3feeca50eba8",
+            "emitter": "bSpace",
+            "groups": [
+                "4b1d48c9-1045-4794-aafb-61597f270382"
+            ],
+            "course_code": "BIOLOGY 1B LAB 730 Sp13",
+            "name": null,
+            "color_class": "bspace-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "BIOLOGY",
+                    "catid": "1B"
+                }
+            ]
+        },
+        {
+            "id": "BIOLOGY:1B:2013-B",
+            "course_code": "BIOLOGY 1B",
+            "ccn": "23731",
+            "site_url": "/academics/semester/spring-2013/class/73980",
+            "emitter": "Campus",
+            "name": "General Biology",
+            "color_class": "campus-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "BIOLOGY",
+                    "catid": "1B"
+                }
+            ],
+            "role": "Student"
+        },
+        {
+            "id": "HISTART:11:2013-B",
+            "course_code": "HISTART 11",
+            "site_url": "http://osoc.berkeley.edu/OSOC/osoc?p_term=SP&x=0&p_classif=--+Choose+a+Course+Classification+--&p_deptname=--+Choose+a+Department+Name+--&p_presuf=--+Choose+a+Course+Prefix%2fSuffix+--&y=0&p_course=11&p_dept=HISTART",
+            "emitter": "Campus",
+            "name": "Introduction to Western Art: Renaissance to the Present",
+            "color_class": "campus-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "HISTART",
+                    "catid": "11"
+                }
+            ],
+            "role": "Student"
+        },
+        {
+            "id": "HMEDSCI:98:2013-B",
+            "course_code": "HMEDSCI 98",
+            "site_url": "http://osoc.berkeley.edu/OSOC/osoc?p_term=SP&x=0&p_classif=--+Choose+a+Course+Classification+--&p_deptname=--+Choose+a+Department+Name+--&p_presuf=--+Choose+a+Course+Prefix%2fSuffix+--&y=0&p_course=98&p_dept=HMEDSCI",
+            "emitter": "Campus",
+            "name": "Directed Group Study",
+            "color_class": "campus-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "HMEDSCI",
+                    "catid": "98"
+                }
+            ],
+            "role": "Student"
+        },
+        {
+            "id": "MATH:16B:2013-B",
+            "course_code": "MATH 16B",
+            "site_url": "http://osoc.berkeley.edu/OSOC/osoc?p_term=SP&x=0&p_classif=--+Choose+a+Course+Classification+--&p_deptname=--+Choose+a+Department+Name+--&p_presuf=--+Choose+a+Course+Prefix%2fSuffix+--&y=0&p_course=16B&p_dept=MATH",
+            "emitter": "Campus",
+            "name": "Analytic Geometry and Calculus",
+            "color_class": "campus-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "MATH",
+                    "catid": "16B"
+                }
+            ],
+            "role": "Student"
+        },
+        {
+            "id": "PB HLTH:116:2013-B",
+            "course_code": "PB HLTH 116",
+            "site_url": "http://osoc.berkeley.edu/OSOC/osoc?p_term=SP&x=0&p_classif=--+Choose+a+Course+Classification+--&p_deptname=--+Choose+a+Department+Name+--&p_presuf=--+Choose+a+Course+Prefix%2fSuffix+--&y=0&p_course=116&p_dept=PB+HLTH",
+            "emitter": "Campus",
+            "name": "Seminar on Social, Political, and Ethical Issues in Health and Me",
+            "color_class": "campus-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "PB HLTH",
+                    "catid": "116"
+                }
+            ],
+            "role": "Student"
+        }
+    ]
+}

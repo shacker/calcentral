@@ -1,0 +1,82 @@
+{
+    "classes": [
+        {
+            "id": "3a28f9a2-eb96-4d0a-af55-3c39980216bd",
+            "site_url": "https://sakai-dev.berkeley.edu/portal/site/3a28f9a2-eb96-4d0a-af55-3c39980216bd",
+            "emitter": "bSpace",
+            "groups": [
+                "17cd6229-2d86-4d9c-8bc0-317bc972b327"
+            ],
+            "course_code": "AMERSTD C172 LEC 001 Sp13",
+            "name": null,
+            "color_class": "bspace-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "UGBA",
+                    "catid": "C172"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "AMERSTD",
+                    "catid": "C172"
+                }
+            ]
+        },
+        {
+            "id": "4cf2aa1c-7dbc-4e63-b127-6bc7e1a2837b",
+            "site_url": "https://sakai-dev.berkeley.edu/portal/site/4cf2aa1c-7dbc-4e63-b127-6bc7e1a2837b",
+            "emitter": "bSpace",
+            "groups": [
+                "7283d10f-1562-4a92-8e3b-5c41d2bfbe81"
+            ],
+            "course_code": "SOCIOL 130AC LEC 001 Sp13",
+            "name": null,
+            "color_class": "bspace-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "SOCIOL",
+                    "catid": "130AC"
+                }
+            ]
+        },
+        {
+            "id": "SOCIOL:130AC:2013-B",
+            "course_code": "SOCIOL 130AC",
+            "site_url": "http://osoc.berkeley.edu/OSOC/osoc?p_term=SP&x=0&p_classif=--+Choose+a+Course+Classification+--&p_deptname=--+Choose+a+Department+Name+--&p_presuf=--+Choose+a+Course+Prefix%2fSuffix+--&y=0&p_course=130AC&p_dept=SOCIOL",
+            "emitter": "Campus",
+            "name": "Social Inequalities: American Cultures",
+            "color_class": "campus-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "SOCIOL",
+                    "catid": "130AC"
+                }
+            ],
+            "role": "Student"
+        },
+        {
+            "id": "UGBA:C172:2013-B",
+            "course_code": "UGBA C172",
+            "site_url": "http://osoc.berkeley.edu/OSOC/osoc?p_term=SP&x=0&p_classif=--+Choose+a+Course+Classification+--&p_deptname=--+Choose+a+Department+Name+--&p_presuf=--+Choose+a+Course+Prefix%2fSuffix+--&y=0&p_course=C172&p_dept=UGBA",
+            "emitter": "Campus",
+            "name": "Business in Its Historical Environment",
+            "color_class": "campus-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "UGBA",
+                    "catid": "C172"
+                }
+            ],
+            "role": "Student"
+        }
+    ]
+}

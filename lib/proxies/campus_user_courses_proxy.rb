@@ -20,6 +20,7 @@ class CampusUserCoursesProxy < BaseProxy
   # {
   #    "id": "COG SCI:C102:2013-B",
   #    "course_code": "COG SCI C102",
+  #    "ccn": "23731"
   #    "site_url": "http://osoc.berkeley.edu/OSOC/osoc?p_term=SP&x=0&p_classif=--+Choose+a+Course+Classification+--&p_deptname=--+Choose+a+Department+Name+--&p_presuf=--+Choose+a+Course+Prefix%2fSuffix+--&y=3&p_course=C102&p_dept=COG+SCI",
   #    "emitter": "Campus",
   #    "name": "Scientific Approaches to Consciousness",
@@ -74,6 +75,7 @@ class CampusUserCoursesProxy < BaseProxy
       {
           id: course_id,
           course_code: "#{row['dept_name']} #{row['catalog_id']}",
+          ccn: row['ccn'],
           site_url: course_to_url(row['term_cd'], row['dept_name'], row['catalog_id']),
           emitter: 'Campus',
           name: row['course_title'],
@@ -88,8 +90,8 @@ class CampusUserCoursesProxy < BaseProxy
     end
   end
 
-  # To start with, just point to this year's Online Schedule of Classes, since that is semi-predictable and
-  # has some useful links.
+  # Link campus courses to internal class pages for the current semester.
+  # TODO: Update to use full class IDs, not just CCNs
   def course_to_url(term_cd, department, catalog_id)
     term = case term_cd
              when 'B' then 'SP'
@@ -99,10 +101,7 @@ class CampusUserCoursesProxy < BaseProxy
                Rails.logger.warn("Unknown term code #{term_cd} for #{department} #{catalog_id}")
                return ''
            end
-    "http://osoc.berkeley.edu/OSOC/osoc?p_term=" + term +
-        "&x=0&p_classif=--+Choose+a+Course+Classification+--&p_deptname=--+Choose+a+Department+Name+--" +
-        "&p_presuf=--+Choose+a+Course+Prefix%2fSuffix+--&y=0&p_course=" +
-        CGI::escape(catalog_id) + "&p_dept=" + CGI::escape(department)
+    "/academics/semester/spring-2013/class/73980"
   end
 
 end

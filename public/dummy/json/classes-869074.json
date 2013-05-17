@@ -1,0 +1,517 @@
+{
+    "classes": [
+        {
+            "id": "4930af9e-2f26-4f50-adc3-c206bde09855",
+            "site_url": "https://sakai-dev.berkeley.edu/portal/site/4930af9e-2f26-4f50-adc3-c206bde09855",
+            "emitter": "bSpace",
+            "groups": [
+                "e985aa36-7c95-449c-a2af-a1d398e576af",
+                "5a49f17b-4218-4679-9b1c-feac65b70a8d"
+            ],
+            "course_code": "CHINESE 10Y Sp13",
+            "name": null,
+            "color_class": "bspace-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "CHINESE",
+                    "catid": "10Y"
+                }
+            ]
+        },
+        {
+            "id": "64fff302-fea7-41c8-99e9-daaa0bec46a6",
+            "site_url": "https://sakai-dev.berkeley.edu/portal/site/64fff302-fea7-41c8-99e9-daaa0bec46a6",
+            "emitter": "bSpace",
+            "short_description": "Bacterial Pathogenesis, Tuesday and Thursday 12:30-2pm, GPB100",
+            "groups": [
+                "46835d31-5c35-4c52-bed0-3ba4a05af63d"
+            ],
+            "course_code": "Bacterial Pathogenesis - Spring 2013",
+            "name": "Bacterial Pathogenesis, Tuesday and Thursday 12:30-2pm, GPB100",
+            "color_class": "bspace-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "PB HLTH",
+                    "catid": "C102"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "PB HLTH",
+                    "catid": "262"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "PLANTBI",
+                    "catid": "C103"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "MCELLBI",
+                    "catid": "C103"
+                }
+            ]
+        },
+        {
+            "id": "c46609e7-2cff-4278-a49c-a5f5f1e76a47",
+            "site_url": "https://sakai-dev.berkeley.edu/portal/site/c46609e7-2cff-4278-a49c-a5f5f1e76a47",
+            "emitter": "bSpace",
+            "groups": [
+                "4117b9df-c869-405f-a0c6-30a3bbb1d76d"
+            ],
+            "course_code": "Genetics, Genomics and Cell Biology Spring 2013",
+            "name": null,
+            "color_class": "bspace-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "MCELLBI",
+                    "catid": "104"
+                }
+            ]
+        },
+        {
+            "id": "c9df5b4c-8197-4611-8a66-e91ac9137d5a",
+            "site_url": "https://sakai-dev.berkeley.edu/portal/site/c9df5b4c-8197-4611-8a66-e91ac9137d5a",
+            "emitter": "bSpace",
+            "groups": [
+                "66e66f00-2af0-4c34-97a9-f6d2fc56e2ad"
+            ],
+            "course_code": "AC Survey Spring 2013",
+            "name": null,
+            "color_class": "bspace-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "AFRICAM",
+                    "catid": "156AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "AMERSTD",
+                    "catid": "139AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ANTHRO",
+                    "catid": "3AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ASAMST",
+                    "catid": "132AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "LINGUIS",
+                    "catid": "55AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "SOCIOL",
+                    "catid": "130AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ESPM",
+                    "catid": "102D"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ESPM",
+                    "catid": "163AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ETH STD",
+                    "catid": "21AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "MUSIC",
+                    "catid": "137AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "NATAMST",
+                    "catid": "120AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "COLWRIT",
+                    "catid": "50AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "COLWRIT",
+                    "catid": "192AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "EDUC",
+                    "catid": "140AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "GWS",
+                    "catid": "50AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "GEOG",
+                    "catid": "50AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "AFRICAM",
+                    "catid": "158B"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "UGBA",
+                    "catid": "156AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "CY PLAN",
+                    "catid": "118AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "EDUC",
+                    "catid": "182AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "HISTORY",
+                    "catid": "127AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "HISTORY",
+                    "catid": "131B"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "HISTORY",
+                    "catid": "C139B"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "PSYCH",
+                    "catid": "166AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "SOCIOL",
+                    "catid": "3AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "SOCIOL",
+                    "catid": "137AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ART",
+                    "catid": "W23AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "EDUC",
+                    "catid": "75AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ETH STD",
+                    "catid": "122AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "LINGUIS",
+                    "catid": "155AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "PB HLTH",
+                    "catid": "150E"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "COLWRIT",
+                    "catid": "25AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "HISTORY",
+                    "catid": "7B"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "HISTORY",
+                    "catid": "C139C"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "IAS",
+                    "catid": "155AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "LD ARCH",
+                    "catid": "141AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "L & S",
+                    "catid": "180AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "PUB POL",
+                    "catid": "117AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "THEATER",
+                    "catid": "25AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "THEATER",
+                    "catid": "52AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ANTHRO",
+                    "catid": "2AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "COLWRIT",
+                    "catid": "150AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "DEMOG",
+                    "catid": "145AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "EDUC",
+                    "catid": "40AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ENGLISH",
+                    "catid": "135AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ETH STD",
+                    "catid": "190AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "HISTORY",
+                    "catid": "124B"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "RELIGST",
+                    "catid": "173AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "AFRICAM",
+                    "catid": "173AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ESPM",
+                    "catid": "50AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ETH STD",
+                    "catid": "11AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ETH STD",
+                    "catid": "144AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "GWS",
+                    "catid": "130AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "LEGALST",
+                    "catid": "132AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "MUSIC",
+                    "catid": "26AC"
+                },
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "POL SCI",
+                    "catid": "111AC"
+                }
+            ]
+        },
+        {
+            "id": "ea70ee13-fc20-4b3e-9e6b-61c482b62eec",
+            "site_url": "https://sakai-dev.berkeley.edu/portal/site/ea70ee13-fc20-4b3e-9e6b-61c482b62eec",
+            "emitter": "bSpace",
+            "groups": [
+                "92a7320d-f452-4c26-83ee-30ad36bf60d1"
+            ],
+            "course_code": "ANTHRO 2AC LEC 001 Sp13",
+            "name": null,
+            "color_class": "bspace-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ANTHRO",
+                    "catid": "2AC"
+                }
+            ]
+        },
+        {
+            "id": "ANTHRO:2AC:2013-B",
+            "course_code": "ANTHRO 2AC",
+            "site_url": "http://osoc.berkeley.edu/OSOC/osoc?p_term=SP&x=0&p_classif=--+Choose+a+Course+Classification+--&p_deptname=--+Choose+a+Department+Name+--&p_presuf=--+Choose+a+Course+Prefix%2fSuffix+--&y=0&p_course=2AC&p_dept=ANTHRO",
+            "emitter": "Campus",
+            "name": "Introduction to Archaeology",
+            "color_class": "campus-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "ANTHRO",
+                    "catid": "2AC"
+                }
+            ],
+            "role": "Student"
+        },
+        {
+            "id": "CHINESE:10Y:2013-B",
+            "course_code": "CHINESE 10Y",
+            "site_url": "http://osoc.berkeley.edu/OSOC/osoc?p_term=SP&x=0&p_classif=--+Choose+a+Course+Classification+--&p_deptname=--+Choose+a+Department+Name+--&p_presuf=--+Choose+a+Course+Prefix%2fSuffix+--&y=0&p_course=10Y&p_dept=CHINESE",
+            "emitter": "Campus",
+            "name": "Intermediate Chinese for Dialect Speakers",
+            "color_class": "campus-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "CHINESE",
+                    "catid": "10Y"
+                }
+            ],
+            "role": "Student"
+        },
+        {
+            "id": "MCELLBI:C103:2013-B",
+            "course_code": "MCELLBI C103",
+            "site_url": "http://osoc.berkeley.edu/OSOC/osoc?p_term=SP&x=0&p_classif=--+Choose+a+Course+Classification+--&p_deptname=--+Choose+a+Department+Name+--&p_presuf=--+Choose+a+Course+Prefix%2fSuffix+--&y=0&p_course=C103&p_dept=MCELLBI",
+            "emitter": "Campus",
+            "name": "Bacterial Pathogenesis",
+            "color_class": "campus-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "MCELLBI",
+                    "catid": "C103"
+                }
+            ],
+            "role": "Student"
+        },
+        {
+            "id": "MCELLBI:104:2013-B",
+            "course_code": "MCELLBI 104",
+            "site_url": "http://osoc.berkeley.edu/OSOC/osoc?p_term=SP&x=0&p_classif=--+Choose+a+Course+Classification+--&p_deptname=--+Choose+a+Department+Name+--&p_presuf=--+Choose+a+Course+Prefix%2fSuffix+--&y=0&p_course=104&p_dept=MCELLBI",
+            "emitter": "Campus",
+            "name": "Genetics, Genomics, and Cell Biology",
+            "color_class": "campus-class",
+            "courses": [
+                {
+                    "term_yr": "2013",
+                    "term_cd": "B",
+                    "dept": "MCELLBI",
+                    "catid": "104"
+                }
+            ],
+            "role": "Student"
+        }
+    ]
+}
