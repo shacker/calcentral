@@ -13,6 +13,33 @@
 
 ActiveRecord::Schema.define(:version => 2013051723151200) do
 
+  create_table "link", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "description"
+    t.boolean  "published"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "link_menucats", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "link_pagecats", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "link_submenucats", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "notifications", :force => true do |t|
     t.string   "uid"
     t.text     "data"
