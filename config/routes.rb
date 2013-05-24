@@ -1,4 +1,10 @@
 Calcentral::Application.routes.draw do
+
+  # Note: The devise_for route must be placed before the mounted engine.
+  devise_for :adminusers
+
+  mount RailsAdmin::Engine => '/ccadmin', :as => 'rails_admin'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

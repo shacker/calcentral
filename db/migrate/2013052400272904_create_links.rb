@@ -1,6 +1,6 @@
 class CreateLinks < ActiveRecord::Migration
   def change
-    create_table :link do |t|
+    create_table :links do |t|
       t.string :name
       t.string :url
       t.string :description
@@ -9,19 +9,19 @@ class CreateLinks < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :link_menucats do |t|
+    create_table :linkmaincats do |t|
       t.string :name
 
       t.timestamps
     end
 
-    create_table :link_submenucats do |t|
+    create_table :linksubcats do |t|
       t.string :name
 
       t.timestamps
     end
 
-    create_table :link_pagecats do |t|
+    create_table :linkpagecats do |t|
       t.string :name
 
       t.timestamps

@@ -11,9 +11,53 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2013051723151200) do
+ActiveRecord::Schema.define(:version => 2013052400272904) do
 
-  create_table "link", :force => true do |t|
+  create_table "adminusers", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "adminusers", ["email"], :name => "index_adminusers_on_email", :unique => true
+  add_index "adminusers", ["reset_password_token"], :name => "index_adminusers_on_reset_password_token", :unique => true
+
+  create_table "linkmaincats", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "linkmaincats_links", :id => false, :force => true do |t|
+    t.integer "linkmaincat_id"
+    t.integer "link_id"
+  end
+
+  add_index "linkmaincats_links", ["linkmaincat_id", "link_id"], :name => "index_linkmaincats_links_on_linkmaincat_id_and_link_id"
+
+  create_table "linkpagecats", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "linkpagecats_links", :id => false, :force => true do |t|
+    t.integer "linkpagecat_id"
+    t.integer "link_id"
+  end
+
+  add_index "linkpagecats_links", ["linkpagecat_id", "link_id"], :name => "index_linkpagecats_links_on_linkpagecat_id_and_link_id"
+
+  create_table "links", :force => true do |t|
     t.string   "name"
     t.string   "url"
     t.string   "description"
@@ -22,23 +66,18 @@ ActiveRecord::Schema.define(:version => 2013051723151200) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "link_menucats", :force => true do |t|
+  create_table "linksubcats", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "link_pagecats", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "linksubcats_links", :id => false, :force => true do |t|
+    t.integer "linksubcat_id"
+    t.integer "link_id"
   end
 
-  create_table "link_submenucats", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+  add_index "linksubcats_links", ["linksubcat_id", "link_id"], :name => "index_linksubcats_links_on_linksubcat_id_and_link_id"
 
   create_table "notifications", :force => true do |t|
     t.string   "uid"
@@ -62,6 +101,10 @@ ActiveRecord::Schema.define(:version => 2013051723151200) do
   end
 
   add_index "oauth2_data", ["uid", "app_id"], :name => "index_oauth2_data_on_uid_app_id", :unique => true
+
+  create_table "oracle_databases", :id => false, :force => true do |t|
+    t.date "temp"
+  end
 
   create_table "user_auths", :force => true do |t|
     t.string   "uid",                             :null => false
