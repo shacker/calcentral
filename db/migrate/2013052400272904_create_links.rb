@@ -1,5 +1,5 @@
 class CreateLinks < ActiveRecord::Migration
-  def change
+  def self.up
     create_table :links do |t|
       t.string :name
       t.string :url
@@ -26,5 +26,12 @@ class CreateLinks < ActiveRecord::Migration
 
       t.timestamps
     end
+  end
+
+  def self.down
+    # drop_table :links
+    # drop_table :linkmaincats
+    # drop_table :linksubcats
+    # drop_table :linkpagecats
   end
 end

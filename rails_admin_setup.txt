@@ -33,4 +33,25 @@ Some setup you must do manually if you haven't yet:
 --------
 
 Create initial user:
-Adminuser.create! :email => 'shacker@berkeley.edu', :password => 'z00mer', :password_confirmation => 'z00mer'
+Adminuser.create! :email => 'shacker@berkeley.edu', :password => 'yourpass', :password_confirmation => 'yourpass'
+
+----
+
+
+routes to signup are disabled. To fix confusing UI:
+https://github.com/plataformatec/devise/wiki/How-To:-Set-up-devise-as-a-single-user-system
+
+----
+
+Authentication currently disabled in rails_admin.rb
+
+Use alternate authentication
+https://github.com/sferik/rails_admin/wiki/Base-configuration
+
+----
+
+Currently whitelisting only the models we want to see
+
+---
+
+

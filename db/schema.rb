@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2013052400272904) do
+ActiveRecord::Schema.define(:version => 2013052500050500) do
 
   create_table "adminusers", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -61,23 +61,23 @@ ActiveRecord::Schema.define(:version => 2013052400272904) do
     t.string   "name"
     t.string   "url"
     t.string   "description"
-    t.boolean  "published"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.boolean  "published",   :default => true
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
+
+  create_table "links_linksubcats", :id => false, :force => true do |t|
+    t.integer "linksubcat_id"
+    t.integer "link_id"
+  end
+
+  add_index "links_linksubcats", ["linksubcat_id", "link_id"], :name => "index_links_linksubcats_on_linksubcat_id_and_link_id"
 
   create_table "linksubcats", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-
-  create_table "linksubcats_links", :id => false, :force => true do |t|
-    t.integer "linksubcat_id"
-    t.integer "link_id"
-  end
-
-  add_index "linksubcats_links", ["linksubcat_id", "link_id"], :name => "index_linksubcats_links_on_linksubcat_id_and_link_id"
 
   create_table "notifications", :force => true do |t|
     t.string   "uid"

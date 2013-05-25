@@ -21,6 +21,11 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+# Don't keep this!!!
+RailsAdmin.config do |config|
+  config.authenticate_with {}
+end
+
 module Calcentral
   class Application < Rails::Application
     initializer :amend_yaml_config, :before => :load_environment_config do

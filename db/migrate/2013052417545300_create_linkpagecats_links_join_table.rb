@@ -9,6 +9,6 @@ class CreateLinkpagecatsLinksJoinTable < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :linkpagecats_links
+    # drop_table :linkpagecats_links
   end
 end

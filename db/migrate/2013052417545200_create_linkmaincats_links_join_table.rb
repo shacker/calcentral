@@ -9,6 +9,6 @@ class CreateLinkmaincatsLinksJoinTable < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :linkmaincats_links
+    # drop_table :linkmaincats_links
   end
 end
