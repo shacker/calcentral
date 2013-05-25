@@ -37,6 +37,9 @@ Adminuser.create! :email => 'shacker@berkeley.edu', :password => 'yourpass', :pa
 
 ----
 
+How can I put all of the link models in a folder?
+---
+
 
 routes to signup are disabled. To fix confusing UI:
 https://github.com/plataformatec/devise/wiki/How-To:-Set-up-devise-as-a-single-user-system

@@ -30,7 +30,6 @@ RailsAdmin.config do |config|
   # config.excluded_models = ['OracleDatabase']
 
   # Include specific models (exclude the others):
-  # config.included_models = ['Account', 'Invoice', 'Item', 'Payment', 'Plan', 'Reminder']
   config.included_models = ['Link', 'Linkmaincat', 'Linksubcat', 'Linkpagecat', 'Linksection']
 
   # Label methods for model instances:
