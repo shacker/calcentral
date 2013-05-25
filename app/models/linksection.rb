@@ -13,10 +13,16 @@ class Linksection < ActiveRecord::Base
   RailsAdmin.config do |config|
     config.model 'Linksection' do
       label "Link Sections"
+
+      object_label_method do
+        :link_section_label_method
+      end
+
     end
 
-    # def custom_label_method
-    #   "Sub Cat #{self.name}"
-    # end
+    def link_section_label_method
+      "#{self.linkmaincat.name} / #{self.linksubcat.name} / #{self.linkpagecat.name}"
+    end
+
   end
 end
