@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2013052500050500) do
+ActiveRecord::Schema.define(:version => 2013052502165200) do
 
   create_table "adminusers", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -37,41 +37,33 @@ ActiveRecord::Schema.define(:version => 2013052500050500) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "linkmaincats_links", :id => false, :force => true do |t|
-    t.integer "linkmaincat_id"
-    t.integer "link_id"
-  end
-
-  add_index "linkmaincats_links", ["linkmaincat_id", "link_id"], :name => "index_linkmaincats_links_on_linkmaincat_id_and_link_id"
-
   create_table "linkpagecats", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "linkpagecats_links", :id => false, :force => true do |t|
-    t.integer "linkpagecat_id"
-    t.integer "link_id"
-  end
-
-  add_index "linkpagecats_links", ["linkpagecat_id", "link_id"], :name => "index_linkpagecats_links_on_linkpagecat_id_and_link_id"
-
   create_table "links", :force => true do |t|
     t.string   "name"
     t.string   "url"
     t.string   "description"
-    t.boolean  "published",   :default => true
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.boolean  "published",      :default => true
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+    t.integer  "linksection_id"
   end
 
-  create_table "links_linksubcats", :id => false, :force => true do |t|
-    t.integer "linksubcat_id"
-    t.integer "link_id"
+  create_table "linksections", :force => true do |t|
+    t.integer  "linkmaincat_id"
+    t.integer  "linksubcat_id"
+    t.integer  "linkpagecat_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
-  add_index "links_linksubcats", ["linksubcat_id", "link_id"], :name => "index_links_linksubcats_on_linksubcat_id_and_link_id"
+  add_index "linksections", ["linkmaincat_id"], :name => "index_linksections_on_linkmaincat_id"
+  add_index "linksections", ["linkpagecat_id"], :name => "index_linksections_on_linkpagecat_id"
+  add_index "linksections", ["linksubcat_id"], :name => "index_linksections_on_linksubcat_id"
 
   create_table "linksubcats", :force => true do |t|
     t.string   "name"
@@ -101,10 +93,6 @@ ActiveRecord::Schema.define(:version => 2013052500050500) do
   end
 
   add_index "oauth2_data", ["uid", "app_id"], :name => "index_oauth2_data_on_uid_app_id", :unique => true
-
-  create_table "oracle_databases", :id => false, :force => true do |t|
-    t.date "temp"
-  end
 
   create_table "user_auths", :force => true do |t|
     t.string   "uid",                             :null => false

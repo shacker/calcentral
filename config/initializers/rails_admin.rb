@@ -31,7 +31,7 @@ RailsAdmin.config do |config|
 
   # Include specific models (exclude the others):
   # config.included_models = ['Account', 'Invoice', 'Item', 'Payment', 'Plan', 'Reminder']
-  config.included_models = ['Link', 'Linkmaincat', 'Linksubcat', 'Linkpagecat']
+  config.included_models = ['Link', 'Linkmaincat', 'Linksubcat', 'Linkpagecat', 'Linksection']
 
   # Label methods for model instances:
   # config.label_methods << :description # Default is [:name, :title]
