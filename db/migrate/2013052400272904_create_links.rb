@@ -4,9 +4,25 @@ class CreateLinks < ActiveRecord::Migration
       t.string :name
       t.string :url
       t.string :description
-      t.boolean :published
+      t.boolean :published, :default => true
 
       t.timestamps
+    end
+
+    create_table :linksections do |t|
+      t.references :linkmaincat
+      t.references :linksubcat
+      t.references :linkpagecat
+
+      t.timestamps
+    end
+    add_index :linksections, :linkmaincat_id
+    add_index :linksections, :linksubcat_id
+    add_index :linksections, :linkpagecat_id
+
+    create_table :links_linksections, :id => false do |t|
+        t.references :link
+        t.references :linksection
     end
 
     create_table "linkmaincats", :force => true do |t|
@@ -33,6 +49,8 @@ class CreateLinks < ActiveRecord::Migration
   end
 
   def self.down
-    # drop_table :links
+    drop_table :links
+    drop_table :linksections
+    drop_table :links_linksections
   end
 end

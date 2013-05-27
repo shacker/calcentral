@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2013052502165200) do
+ActiveRecord::Schema.define(:version => 2013052706554901) do
 
   create_table "adminusers", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -33,24 +33,30 @@ ActiveRecord::Schema.define(:version => 2013052502165200) do
 
   create_table "linkmaincats", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "slug",       :limit => nil
   end
 
   create_table "linkpagecats", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "slug",       :limit => nil
   end
 
   create_table "links", :force => true do |t|
     t.string   "name"
     t.string   "url"
     t.string   "description"
-    t.boolean  "published",      :default => true
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
-    t.integer  "linksection_id"
+    t.boolean  "published",   :default => true
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
+  create_table "links_linksections", :id => false, :force => true do |t|
+    t.integer "link_id"
+    t.integer "linksection_id"
   end
 
   create_table "linksections", :force => true do |t|
@@ -67,8 +73,9 @@ ActiveRecord::Schema.define(:version => 2013052502165200) do
 
   create_table "linksubcats", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "slug",       :limit => nil
   end
 
   create_table "notifications", :force => true do |t|
