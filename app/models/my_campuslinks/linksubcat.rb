@@ -1,0 +1,17 @@
+module MyCampuslinks
+
+  class Linksubcat < ActiveRecord::Base
+    attr_accessible :name, :slug
+    validates_uniqueness_of :name, :slug
+
+    RailsAdmin.config do |config|
+      config.model 'Linksubcat' do
+        label "Link Subcategories"
+      end
+
+      def custom_label_method
+        "Sub Cat #{self.name}"
+      end
+    end
+  end
+end

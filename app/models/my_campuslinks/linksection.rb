@@ -1,0 +1,34 @@
+module MyCampuslinks
+
+  class Linksection < ActiveRecord::Base
+
+    attr_accessible :linkmaincat_id
+    attr_accessible :linksubcat_id
+    attr_accessible :linkpagecat_id
+
+    belongs_to :linkmaincat
+    belongs_to :linksubcat
+    belongs_to :linkpagecat
+    has_and_belongs_to_many :links
+
+    RailsAdmin.config do |config|
+      config.model 'MyCampuslinks::Linksection' do
+        label "Link Sections"
+        weight 99
+
+        object_label_method do
+          :link_section_label_method
+        end
+
+      end
+
+      # Represent instances of this model as:
+      def link_section_label_method
+        if self.id
+          "#{self.linkmaincat.name}/#{self.linksubcat.name}/#{self.linkpagecat.name}"
+        end
+      end
+
+    end
+  end
+end
