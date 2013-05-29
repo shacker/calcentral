@@ -102,7 +102,8 @@
      */
     var getLinks = function() {
       // Data contains "links" and "navigation"
-      $http.get('/json/campuslinks.json').success(function(campusdata) {
+      // $http.get('/json/campuslinks.json').success(function(campusdata) {
+      $http.get('/api/my/campuslinks').success(function(campusdata) {
         $scope.campusdata = campusdata;
 
         var title = 'Campus';

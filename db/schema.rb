@@ -11,38 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2013052706554901) do
-
-  create_table "adminusers", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
-  end
-
-  add_index "adminusers", ["email"], :name => "index_adminusers_on_email", :unique => true
-  add_index "adminusers", ["reset_password_token"], :name => "index_adminusers_on_reset_password_token", :unique => true
+ActiveRecord::Schema.define(:version => 2013052819035300) do
 
   create_table "linkmaincats", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-    t.string   "slug",       :limit => nil
+    t.string   "name",       :null => false
+    t.string   "slug",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "linkpagecats", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-    t.string   "slug",       :limit => nil
+    t.string   "name",       :null => false
+    t.string   "slug",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "links", :force => true do |t|
@@ -59,6 +41,11 @@ ActiveRecord::Schema.define(:version => 2013052706554901) do
     t.integer "linksection_id"
   end
 
+  create_table "links_user_roles", :id => false, :force => true do |t|
+    t.integer "link_id"
+    t.integer "user_role_id"
+  end
+
   create_table "linksections", :force => true do |t|
     t.integer  "linkmaincat_id"
     t.integer  "linksubcat_id"
@@ -72,10 +59,10 @@ ActiveRecord::Schema.define(:version => 2013052706554901) do
   add_index "linksections", ["linksubcat_id"], :name => "index_linksections_on_linksubcat_id"
 
   create_table "linksubcats", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-    t.string   "slug",       :limit => nil
+    t.string   "name",       :null => false
+    t.string   "slug",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "notifications", :force => true do |t|
@@ -101,6 +88,10 @@ ActiveRecord::Schema.define(:version => 2013052706554901) do
 
   add_index "oauth2_data", ["uid", "app_id"], :name => "index_oauth2_data_on_uid_app_id", :unique => true
 
+  create_table "oracle_databases", :id => false, :force => true do |t|
+    t.date "temp"
+  end
+
   create_table "user_auths", :force => true do |t|
     t.string   "uid",                             :null => false
     t.boolean  "is_superuser", :default => false, :null => false
@@ -121,6 +112,11 @@ ActiveRecord::Schema.define(:version => 2013052706554901) do
   end
 
   add_index "user_data", ["uid"], :name => "index_user_data_on_uid", :unique => true
+
+  create_table "user_roles", :force => true do |t|
+    t.string "name"
+    t.string "slug"
+  end
 
   create_table "user_visits", :id => false, :force => true do |t|
     t.string   "uid",           :null => false

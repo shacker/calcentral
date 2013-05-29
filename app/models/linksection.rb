@@ -9,10 +9,10 @@ class Linksection < ActiveRecord::Base
   belongs_to :linkpagecat
   has_and_belongs_to_many :links
 
-
   RailsAdmin.config do |config|
     config.model 'Linksection' do
       label "Link Sections"
+      weight 99
 
       object_label_method do
         :link_section_label_method
@@ -23,7 +23,7 @@ class Linksection < ActiveRecord::Base
     # Represent instances of this model as:
     def link_section_label_method
       if self.id
-        "#{self.linkmaincat.name} / #{self.linksubcat.name} / #{self.linkpagecat.name}"
+        "#{self.linkmaincat.name}/#{self.linksubcat.name}/#{self.linkpagecat.name}"
       end
     end
 

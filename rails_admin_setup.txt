@@ -57,4 +57,11 @@ Currently whitelisting only the models we want to see
 
 ---
 
+Uniqueness of URLs is guaranteed at the model level
+
+---
+
+There is a bit of slippage in nomenclature between the front-end code and the rails_admin code. The front end refers to "top category" as e.g. "Academic Planning". But in the UI, "Academic" is a top-level and "Academic Planning" is a subsection of that. The back-end more closely mirrors the actual UI by referring to "Academic" as a "Main Category" and "Academic Planning" as a "Subcategory". The on-page sections are referred to as "Sections."
+
+
 
