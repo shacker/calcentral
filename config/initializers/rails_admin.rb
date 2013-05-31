@@ -36,7 +36,7 @@ RailsAdmin.config do |config|
   # config.excluded_models = ['OracleDatabase']
 
   # Include specific models (exclude the others):
-  config.included_models = ['Link', 'Linkmaincat', 'Linksubcat', 'Linkpagecat', 'Linksection', 'UserRole']
+  config.included_models = ['Link', 'Linkmaincat', 'Linksubcat', 'Linkpagecat', 'Linksection', 'UserRole', 'LinkCat', 'LinkCatType']
 
   # Label methods for model instances:
   # config.label_methods << :description # Default is [:name, :title]
@@ -83,6 +83,14 @@ RailsAdmin.config do |config|
 
   config.model 'Linksubcat' do
     label "Link Subcategories"
+  end
+
+  config.model 'LinkCat' do
+    label "Link New Categories"
+  end
+
+  config.model 'LinkCatType' do
+    label "Link Category Types"
   end
 
   # UserRole needs to be available so we can set perms on Links, but should not be in left nav

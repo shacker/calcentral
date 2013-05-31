@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2013052819035300) do
+ActiveRecord::Schema.define(:version => 2013053022093000) do
+
+  create_table "link_cat_types", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "link_cats", :force => true do |t|
+    t.string   "name",       :null => false
+    t.string   "slug",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "link_cat_type_id",    :null => false
+  end
 
   create_table "linkmaincats", :force => true do |t|
     t.string   "name",       :null => false

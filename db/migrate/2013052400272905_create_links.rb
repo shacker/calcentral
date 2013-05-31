@@ -13,6 +13,7 @@ class CreateLinks < ActiveRecord::Migration
       t.references :linkmaincat
       t.references :linksubcat
       t.references :linkpagecat
+      t.references :link_cat
 
       t.timestamps
     end
